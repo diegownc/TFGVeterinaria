@@ -13,20 +13,23 @@
                             <!-- Username -->
                             <div class="form-group">
                                 <label for="txtUsername">Usuario</label>
-                                <input type="text" class="form-control" id="txtUsername" runat="server" placeholder="Ingrese su usuario" required />
+                                <input type="text" class="form-control" id="txtUsername" runat="server" placeholder="Ingrese su usuario" style="max-width: 100%" required />
                             </div>
                             <!-- Password -->
                             <div class="form-group">
                                 <label for="txtPassword">Contraseña</label>
-                                <input type="password" class="form-control" id="txtPassword" runat="server" placeholder="Ingrese su contraseña" required />
+                                <input type="password" class="form-control" id="txtPassword" runat="server" placeholder="Ingrese su contraseña" style="max-width: 100%" required />
                             </div>
+                            <!-- Reset Password -->
+                            <a href="Login.aspx" style="color: lightskyblue"> ¿Has olvidado tu Contraseña? </a>
                             <!-- Error Message -->
                             <div>
                                 <span id="lblMessage" runat="server" style="color: red;"></span>
                             </div>
                             <!-- Login Button -->
-                            <div class="text-center">
+                            <div class="text-center" style="margin-top: 20px">
                                 <button type="submit" id="btnLogin" class="btn btn-primary" runat="server">Iniciar sesión</button>
+                                <button type="submit" id="btnRegistrarse" class="btn btn-success" runat="server">Registrarse</button>
                             </div>
                         </form>
                     </div>
