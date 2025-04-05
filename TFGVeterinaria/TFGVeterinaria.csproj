@@ -119,6 +119,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Documentacion\ScriptSQL.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -149,6 +150,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Documentacion\Mockups.drawio" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -234,6 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="WebForms\Chat\" />
+    <Folder Include="WebForms\Comunidad\" />
+    <Folder Include="WebForms\Login\" />
+    <Folder Include="WebForms\Mascotas\" />
+    <Folder Include="WebForms\Noticias\" />
+    <Folder Include="WebForms\Servicios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
