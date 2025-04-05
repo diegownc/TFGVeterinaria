@@ -29,6 +29,29 @@ ALTER TABLE USUARIOS ADD CONSTRAINT USUARIOS_PERFILES_FK FOREIGN KEY (PERFIL) RE
 ALTER TABLE USUARIOS ADD CONSTRAINT USUARIOS_UNIQUE UNIQUE (EMAIL);
 
 
+CREATE TABLE DIALOGOS(
+	CODIGO VARCHAR(50),
+	DESCRIPCION VARCHAR(200),
+	PRIMARY KEY (CODIGO)
+);
+
+CREATE TABLE PERMISOS(
+	PERFIL VARCHAR(50),
+	DIALOGO VARCHAR(50),
+	ALTA INTEGER DEFAULT 0,
+	BAJA INTEGER DEFAULT 0,
+	CONSULTA INTEGER DEFAULT 0,
+	MODIF INTEGER DEFAULT 0,
+	PRIMARY KEY (PERFIL , DIALOGO)
+);
+
+
 -- ########################################################################################################################################
 -- INSERTS
 -- ########################################################################################################################################
+
+
+INSERT INTO PERFILES (CODIGO, DESCRIPCION) VALUES ('GENERICO', 'Perfil Genérico');
+INSERT INTO PERFILES (CODIGO, DESCRIPCION) VALUES ('VETERINARIO', 'Perfil Veterinario');
+INSERT INTO PERFILES (CODIGO, DESCRIPCION) VALUES ('ADMINISTRADOR', 'Perfil Administrador');
+

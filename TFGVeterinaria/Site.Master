@@ -17,7 +17,7 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
 </head>
-<body>
+<body class="bg-dark text-light">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -50,6 +50,13 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
+                    </ul>
+
+                    <!-- Botón de Login alineado a la derecha -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link btn" runat="server" href="~/Login">Entrar / Regístrate</a>
+                        </li>
                     </ul>
                 </div>
             </div>
