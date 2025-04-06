@@ -29,9 +29,10 @@
                             <!-- Login Button -->
                             <div class="text-center" style="margin-top: 20px">
                                 <button type="submit" id="btnLogin" class="btn btn-primary" runat="server">Iniciar sesión</button>
-                                <button type="submit" id="btnRegistrarse" class="btn btn-success" runat="server">Registrarse</button>
+                                <a class="btn btn-success" href="Registro.aspx" style="color: lightgoldenrodyellow"> Registrarse </a>
                             </div>
                         </form>
+                         
                     </div>
                 </div>
             </div>

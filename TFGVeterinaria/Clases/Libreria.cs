@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using Npgsql;
 using WebGrease.Css.Ast.Selectors;
@@ -39,5 +40,17 @@ namespace TFGVeterinaria.Clases
                 return false;
             }
         }
+
+
+
+        public static bool CompruebaEmail(string email)
+        {
+            string patron = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+
+            // Validar el correo con la expresión regular
+            Regex regex = new Regex(patron);
+            return regex.IsMatch(email);
+        }
+        
     }
 }
