@@ -6,6 +6,9 @@ using System.Text.RegularExpressions;
 using System.Web;
 using Npgsql;
 using WebGrease.Css.Ast.Selectors;
+using System.Security.Cryptography;
+using System.Text;
+using System.Diagnostics;
 
 namespace TFGVeterinaria.Clases
 {
@@ -13,44 +16,27 @@ namespace TFGVeterinaria.Clases
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["PostgresConnection"].ConnectionString;
 
-        public static bool ValidarUsuario(string username, string password)
+        public static void addLog(string ubicacion, string stackstraceStr, string error_messageStr)
         {
             try
             {
-                using (var conn = new NpgsqlConnection(connectionString))
+                using (var connection = new NpgsqlConnection(connectionString))
                 {
-                    conn.Open();
-
-                    string query = "SELECT COUNT(1) FROM usuarios WHERE username = @username AND password = @password";
-
-                    using (var cmd = new NpgsqlCommand(query, conn))
+                    connection.Open();
+                    string sql = "INSERT INTO log_procesos (ubicacion, stacktrace, error_message, fecha) VALUES (@ubicacion, @stacktrace, @error_message, now())";
+                    using (var cmd = new NpgsqlCommand(sql, connection))
                     {
-                        // Parámetros para evitar SQL injection
-                        cmd.Parameters.AddWithValue("username", username);
-                        cmd.Parameters.AddWithValue("password", password); // Aquí deberías usar un hash de la contraseña, por ahora es texto plano.
-
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        return count > 0;
+                        cmd.Parameters.AddWithValue("ubicacion", ubicacion);
+                        cmd.Parameters.AddWithValue("stacktrace", stackstraceStr);
+                        cmd.Parameters.AddWithValue("error_message", error_messageStr);
+                        cmd.ExecuteNonQuery();
                     }
                 }
-            }
-            catch (Exception ex)
+            }catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return false;
+                //TODO
+                Console.WriteLine(ex.ToString());
             }
         }
-
-
-
-        public static bool CompruebaEmail(string email)
-        {
-            string patron = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-
-            // Validar el correo con la expresión regular
-            Regex regex = new Regex(patron);
-            return regex.IsMatch(email);
-        }
-        
     }
 }

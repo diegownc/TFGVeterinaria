@@ -105,6 +105,15 @@ namespace TFGVeterinaria
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPassword;
 
         /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+
+        /// <summary>
         /// Control revPasswordLength.
         /// </summary>
         /// <remarks>
@@ -114,13 +123,13 @@ namespace TFGVeterinaria
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revPasswordLength;
 
         /// <summary>
-        /// Control revPasswordUpperCase.
+        /// Control RegularExpressionValidator1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revPasswordUpperCase;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
 
         /// <summary>
         /// Control revPasswordLowerCase.
@@ -157,6 +166,15 @@ namespace TFGVeterinaria
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator cvConfirmPassword;
+
+        /// <summary>
+        /// Control chkVeterinario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox chkVeterinario;
 
         /// <summary>
         /// Control lblMessage.

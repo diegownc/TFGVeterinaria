@@ -10,26 +10,24 @@
                     </div>
                     <div class="card-body">
                         <form id="loginForm">
-                            <!-- Username -->
-                            <div class="form-group">
-                                <label for="txtUsername">Usuario</label>
-                                <input type="text" class="form-control" id="txtUsername" runat="server" placeholder="Ingrese su usuario" style="max-width: 100%" required />
-                            </div>
-                            <!-- Password -->
-                            <div class="form-group">
+                             <div class="form-group">
+                                 <label for="txtUserName">Usuario</label>
+                                 <asp:TextBox CssClass="form-control mb-1" style="max-width: 100%" placeholder="Ingrese su nombre de usuario" ID="txtUserName" runat="server" />
+                             </div>
+                            <div class="form-group mt-2">
                                 <label for="txtPassword">Contraseña</label>
-                                <input type="password" class="form-control" id="txtPassword" runat="server" placeholder="Ingrese su contraseña" style="max-width: 100%" required />
+                                <asp:TextBox  CssClass="form-control"  ID="txtPassword" runat="server" TextMode="Password" placeholder="Ingrese su contraseña" style="max-width: 100%" />
                             </div>
                             <!-- Reset Password -->
                             <a href="Login.aspx" style="color: lightskyblue"> ¿Has olvidado tu Contraseña? </a>
                             <!-- Error Message -->
                             <div>
-                                <span id="lblMessage" runat="server" style="color: red;"></span>
+                                <span id="lblMessage" runat="server"></span>
                             </div>
                             <!-- Login Button -->
                             <div class="text-center" style="margin-top: 20px">
-                                <button type="submit" id="btnLogin" class="btn btn-primary" runat="server">Iniciar sesión</button>
-                                <a class="btn btn-success" href="Registro.aspx" style="color: lightgoldenrodyellow"> Registrarse </a>
+                                <button type="submit" id="btnLogin" class="btn btn-primary"  onserverclick="btnLogin_ServerClick" runat="server">Iniciar sesión</button>
+                                <a class="btn btn-success" href="Registro" style="color: lightgoldenrodyellow"> Registrarse </a>
                             </div>
                         </form>
                          
