@@ -22,14 +22,29 @@ namespace TFGVeterinaria
                 lblMessage.InnerText = "";
 
                 if (Login_Class.ExisteUsuario(txtUserName.Text)){
-                    
-                    if (Login_Class.CompruebaPassword(txtUserName.Text, txtPassword.Text)) {
-                        Response.Redirect("~/Acercade");
+                    if (!Login_Class.ExisteUsuarioBloqueado(txtUserName.Text)) {
+                        if (Login_Class.CompruebaPassword(txtUserName.Text, txtPassword.Text)) {
+                            string usuario = txtUserName.Text;
+                            string nombre = string.Empty;
+                            string email = string.Empty;
+                            int verificado = 0;
+                            string perfil = string.Empty;
+                            
+                            Login_Class.getDatosUsuario(ref usuario, ref nombre, ref email, ref verificado, ref perfil);
+                            Session["USR_USUARIO"] = usuario;
+                            Session["USR_NOMBRE"] = nombre;
+                            Session["USR_PERFIL"] = perfil;
+                            Session["USR_EMAIL"] = email;
+                            Session["USR_VERIFICADO"] = verificado;
+
+                        } else {
+                            lblMessage.Attributes["class"] = "error-message";
+                            lblMessage.InnerText = "La contraseña no es correcta";
+                        }
                     } else {
                         lblMessage.Attributes["class"] = "error-message";
-                        lblMessage.InnerText = "La contraseña no es correcta";
+                        lblMessage.InnerText = "El usuario esta bloqueado, contacte con un administrador";
                     }
-
                 } else{
                     lblMessage.Attributes["class"] = "error-message";
                     lblMessage.InnerText = "Usuario no existe";

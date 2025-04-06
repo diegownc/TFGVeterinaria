@@ -34,12 +34,30 @@ namespace TFGVeterinaria.Clases
             return ok;
         }
 
+        public static bool ExisteUsuarioBloqueado(string username) {
+            bool ok = false;
+            using (var conn = new NpgsqlConnection(connectionString)) {
+                conn.Open();
+
+                string query = "SELECT COUNT(1) FROM usuarios WHERE upper(usuario) = @username and activo=0";
+
+                using (var cmd = new NpgsqlCommand(query, conn)) {
+                    // Parámetros para evitar SQL injection
+                    cmd.Parameters.AddWithValue("username", username.ToUpper());
+
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    ok = count > 0;
+                }
+            }
+            return ok;
+        }
+
         public static bool CompruebaPassword(string username, string enteredPassword){
             bool ok = false;
             using (var connection = new NpgsqlConnection(connectionString))
             {
                 connection.Open();
-
+                
                 string sql = "SELECT clave, salt FROM usuarios WHERE upper(usuario) = @username";
                 using (var cmd = new NpgsqlCommand(sql, connection))
                 {
@@ -130,6 +148,26 @@ namespace TFGVeterinaria.Clases
                 res = Convert.ToBase64String(saltBytes);
             }
             return res;
+        }
+
+        public static void getDatosUsuario(ref string usuario, ref string nombre, ref string email, ref int verificado, ref string perfil) {
+            using (var connection = new NpgsqlConnection(connectionString)) {
+                connection.Open();
+
+                string sql = "SELECT usuario, nombre, email, verificado, perfil FROM usuarios WHERE upper(usuario) = @username";
+                using (var cmd = new NpgsqlCommand(sql, connection)) {
+                    cmd.Parameters.AddWithValue("username", usuario.ToUpper());
+                    using (var reader = cmd.ExecuteReader()) {
+                        if (reader.Read()) {
+                            usuario = reader.GetString(0);
+                            nombre = reader.GetString(1);
+                            email = reader.GetString(2);
+                            verificado = reader.GetInt16(3);
+                            perfil = reader.GetString(4);
+                        }
+                    }
+                }
+            }
         }
     }
 }
