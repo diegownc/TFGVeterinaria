@@ -202,6 +202,7 @@
     <Content Include="Documentacion\Mockups.drawio" />
     <Content Include="WebForms\Login\Registro.aspx" />
     <Content Include="WebForms\Login\Login.aspx" />
+    <Content Include="WebForms\Mascotas\Mascotas.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -300,12 +301,18 @@
     <Compile Include="WebForms\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\Mascotas\Mascotas.aspx.cs">
+      <DependentUpon>Mascotas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mascotas\Mascotas.aspx.designer.cs">
+      <DependentUpon>Mascotas.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="WebForms\Chat\" />
     <Folder Include="WebForms\Comunidad\" />
-    <Folder Include="WebForms\Mascotas\" />
     <Folder Include="WebForms\Noticias\" />
     <Folder Include="WebForms\Servicios\" />
   </ItemGroup>

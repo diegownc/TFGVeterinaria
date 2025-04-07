@@ -17,6 +17,9 @@ namespace TFGVeterinaria
             //Login
             RouteTable.Routes.MapPageRoute("loginRoute", "Login", "~/WebForms/Login/Login.aspx");
             RouteTable.Routes.MapPageRoute("registroRoute", "Registro", "~/WebForms/Login/Registro.aspx");
+            
+            //Mascotas
+            RouteTable.Routes.MapPageRoute("mascotasRoute", "Mascotas", "~/WebForms/Mascotas/Mascotas.aspx");
 
         }
     }

@@ -57,12 +57,12 @@
                 </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="navbar-brand" id="ServiciosMenu" runat="server" href="~/About">Servicios</a></li>
-                        <li class="nav-item"><a class="nav-link" id="ComunidadMenu" runat="server" href="~/About">Comunidad</a></li>
-                        <li class="nav-item"><a class="nav-link" id="NoticiasMenu" runat="server" href="~/Contact">Noticias</a></li>
-                        <li class="nav-item"><a class="nav-link" id="MascotasMenu" runat="server" href="~/Contact">Mascotas</a></li>
-                        <li class="nav-item"><a class="nav-link" id="ChatMenu" runat="server" href="~/Contact">Chat</a></li>
-                        <li class="nav-item"><a class="nav-link" id="CitasMenu" runat="server" href="~/Contact">Citas</a></li>
+                        <li class="nav-item"><a class="navbar-brand" id="ServiciosMenu" runat="server" href="~/Servicios">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" id="ComunidadMenu" runat="server" href="~/Comunidad">Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" id="NoticiasMenu" runat="server" href="~/Noticias">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" id="MascotasMenu" runat="server" href="~/Mascotas">Mascotas</a></li>
+                        <li class="nav-item"><a class="nav-link" id="ChatMenu" runat="server" href="~/Chat">Chat</a></li>
+                        <li class="nav-item"><a class="nav-link" id="CitasMenu" runat="server" href="~/Citas">Citas</a></li>
                     </ul>
 
                     <!-- Botón de Login alineado a la derecha -->
