@@ -15,6 +15,7 @@ namespace TFGVeterinaria
         private static DataTable dt;
 
         protected void Page_Load(object sender, EventArgs e) {
+            Session["PAGE"] = "MASCOTAS";
             if (!IsPostBack) {
                 // Crear un DataTable y agregar columnas
                 dt = new DataTable();

@@ -36,7 +36,7 @@ namespace TFGVeterinaria
                             Session["USR_PERFIL"] = perfil;
                             Session["USR_EMAIL"] = email;
                             Session["USR_VERIFICADO"] = verificado;
-
+                            Session["PAGE"] = "SERVICIOS";
                         } else {
                             lblMessage.Attributes["class"] = "error-message";
                             lblMessage.InnerText = "La contraseña no es correcta";

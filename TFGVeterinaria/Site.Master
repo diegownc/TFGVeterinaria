@@ -63,12 +63,15 @@
                         <li class="nav-item"><a class="nav-link" id="MascotasMenu" runat="server" href="~/Mascotas">Mascotas</a></li>
                         <li class="nav-item"><a class="nav-link" id="ChatMenu" runat="server" href="~/Chat">Chat</a></li>
                         <li class="nav-item"><a class="nav-link" id="CitasMenu" runat="server" href="~/Citas">Citas</a></li>
+                        <li class="nav-item"><a class="nav-link" id="UsuariosMenu" runat="server" href="~/Usuarios">Usuarios</a></li>
+                        <li class="nav-item"><a class="nav-link" id="LogsMenu" runat="server" href="~/Logs">Logs</a></li>
                     </ul>
 
                     <!-- Botón de Login alineado a la derecha -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link btn" runat="server" href="~/Login">Entrar / Regístrate</a>
+                            <a class="nav-link btn" id="LoginBtn" runat="server" href="~/Login">Entrar / Regístrate</a>
+                            <a class="nav-link btn" id="SalirBtn" runat="server" href="~/Salir">Salir</a>
                         </li>
                     </ul>
                 </div>
