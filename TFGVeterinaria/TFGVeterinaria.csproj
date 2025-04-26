@@ -171,6 +171,9 @@
     <Content Include="Documentacion\ScriptSQL.sql" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\Gato1.jpg" />
+    <Content Include="Imagenes\Perro1.jpg" />
+    <Content Include="Imagenes\Perro2.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -202,6 +205,7 @@
     <Content Include="Documentacion\Mockups.drawio" />
     <Content Include="WebForms\Login\Registro.aspx" />
     <Content Include="WebForms\Login\Login.aspx" />
+    <Content Include="WebForms\Mascotas\Mascotas_Detalle.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -300,6 +304,13 @@
     </Compile>
     <Compile Include="WebForms\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Mascotas\Mascotas_Detalle.aspx.cs">
+      <DependentUpon>Mascotas_Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Mascotas\Mascotas_Detalle.aspx.designer.cs">
+      <DependentUpon>Mascotas_Detalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Mascotas\Mascotas.aspx.cs">
       <DependentUpon>Mascotas.aspx</DependentUpon>

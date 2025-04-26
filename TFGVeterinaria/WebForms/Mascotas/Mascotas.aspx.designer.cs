@@ -13,6 +13,24 @@ namespace TFGVeterinaria {
     public partial class Mascotas {
 
         /// <summary>
+        /// Control DELETE_FIELD.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField DELETE_FIELD;
+
+        /// <summary>
+        /// Control btnRedirect.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnRedirect;
+
+        /// <summary>
         /// Control myGridView.
         /// </summary>
         /// <remarks>
