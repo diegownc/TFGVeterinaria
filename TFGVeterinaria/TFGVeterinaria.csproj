@@ -211,6 +211,7 @@
     <Content Include="WebForms\Noticias\Noticias_Detalle.aspx" />
     <Content Include="WebForms\Noticias\Noticias.aspx" />
     <Content Include="WebForms\ErrorPage.aspx" />
+    <Content Include="WebForms\Usuarios\Usuarios.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -254,6 +255,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clases\Usuarios_Class.cs" />
     <Compile Include="Clases\Libreria.cs" />
     <Compile Include="Clases\Noticias_Class.cs" />
     <Compile Include="Clases\Login_Class.cs" />
@@ -352,13 +354,19 @@
     <Compile Include="WebForms\ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\Usuarios\Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Usuarios\Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="WebForms\Chat\" />
     <Folder Include="WebForms\Comunidad\" />
     <Folder Include="WebForms\Servicios\" />
-    <Folder Include="WebForms\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
