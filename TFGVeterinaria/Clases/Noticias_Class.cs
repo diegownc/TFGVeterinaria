@@ -76,7 +76,7 @@ namespace TFGVeterinaria.Clases
             using (var conn = new NpgsqlConnection(connectionString)) {
                 conn.Open();
 
-                string query = "SELECT N.ID, N.TITULO, N.DESCRIPCION, N.CONTENIDO, COALESCE(N.AUTOR, U.NOMBRE) AUTOR, N.FECHA, N.IMAGENURL FROM NOTICIAS N LEFT JOIN USUARIOS U ON N.USUARIO = U.USUARIO ORDER BY N.ID DESC";
+                string query = "SELECT N.ID, N.TITULO, N.DESCRIPCION, N.CONTENIDO, COALESCE(N.AUTOR, U.NOMBRE) AUTOR, N.FECHA, N.IMAGENURL FROM NOTICIAS N LEFT JOIN USUARIOS U ON N.USUARIO = U.USUARIO WHERE N.ACTIVO=1 ORDER BY N.ID DESC";
 
                 using (var command = new NpgsqlCommand(query, conn)) {
                     // Crear un adaptador de datos para llenar el DataTable
@@ -129,17 +129,6 @@ namespace TFGVeterinaria.Clases
                 NewsResponse respuesta = JsonConvert.DeserializeObject<NewsResponse>(resultado);
                 if (respuesta != null) {
                     foreach (var articulo in respuesta.Articles) {
-                        Console.WriteLine("-----------------------------------------");
-                        Console.WriteLine($"Título: {articulo.Title}");
-                        Console.WriteLine($"Autor: {articulo.Author}");
-                        Console.WriteLine($"Descripción: {articulo.Description}");
-                        Console.WriteLine($"Fuente: {articulo.Source.Name}");
-                        Console.WriteLine($"Publicado en: {articulo.PublishedAt.ToShortDateString()}");
-                        Console.WriteLine($"URL: {articulo.Url}");
-                        Console.WriteLine($"Imagen URL: {articulo.UrlToImage}");
-                        Console.WriteLine("Contenido: " + articulo.Content);
-                        Console.WriteLine("-----------------------------------------");
-
                         AddNoticia(articulo.Title, articulo.Description, articulo.Content, articulo.Author, "", articulo.PublishedAt, articulo.UrlToImage);
                     }
                 }
@@ -174,6 +163,42 @@ namespace TFGVeterinaria.Clases
             }
 
             return ok;
+        }
+
+
+        public static bool DesactivarNoticia(int ID) {
+            bool ok = false;
+
+            using (var connection = new NpgsqlConnection(connectionString)) {
+                connection.Open();
+                string sql = "UPDATE NOTICIAS SET ACTIVO = 0 WHERE ID=@ID";
+                using (var cmd = new NpgsqlCommand(sql, connection)) {
+                    cmd.Parameters.AddWithValue("ID", ID);
+                    cmd.ExecuteNonQuery();
+                    ok = true;
+                }
+            }
+
+            return ok;
+        }
+
+
+        public static void getDatosNoticia(int ID, ref string titulo, ref string descripcion, ref string contenido) {
+            using (var connection = new NpgsqlConnection(connectionString)) {
+                connection.Open();
+
+                string sql = "SELECT TITULO, DESCRIPCION, CONTENIDO FROM NOTICIAS WHERE ID = @ID";
+                using (var cmd = new NpgsqlCommand(sql, connection)) {
+                    cmd.Parameters.AddWithValue("ID", ID);
+                    using (var reader = cmd.ExecuteReader()) {
+                        if (reader.Read()) {
+                            titulo = reader.GetString(0);
+                            descripcion = reader.GetString(1);
+                            contenido = reader.GetString(2);
+                        }
+                    }
+                }
+            }
         }
     }
 }

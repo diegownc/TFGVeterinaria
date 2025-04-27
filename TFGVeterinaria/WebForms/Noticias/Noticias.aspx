@@ -63,7 +63,7 @@
         <div class="row justify-content-center align-items-center" style="height: 100%;">
              <asp:Button ID="btnActualizar" runat="server" Text="Actualizar Noticias"  OnClick="btnActualizar_Click" CssClass="btn btn-success m-2" />
 
-            <asp:GridView ID="gvLecciones" runat="server" AutoGenerateColumns="False" OnRowCommand="gvLecciones_RowCommand" CssClass="table">
+            <asp:GridView ID="gvLecciones" runat="server" AutoGenerateColumns="False" OnRowCommand="gvLecciones_RowCommand" CssClass="table" OnRowDataBound="gvLecciones_RowDataBound">
                 <Columns>
                     <asp:TemplateField>
                         <ItemTemplate>
@@ -82,8 +82,8 @@
                     </asp:TemplateField>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:Button ID="btnAcceder" runat="server" Text="Acceder Lección" CommandName="Acceder" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
-                            <asp:Button ID="btnAnadir" runat="server" Text="Añadir Lección" CommandName="Anadir" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-success btn-sm"/>
+                            <asp:Button ID="btnAcceder" runat="server" Text="Detalle" CommandName="Acceder" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
+                            <asp:Button ID="btnAnadir" runat="server" Text="Acceder Lección" CommandName="AccederLeccion" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
                             <asp:Button ID="btnDelete" runat="server" Text="Eliminar"  CommandName="Delete" CssClass="btn btn-danger btn-sm" OnClientClick="return showDeleteConfirmation(this);"/>
                         </ItemTemplate>
                     </asp:TemplateField>

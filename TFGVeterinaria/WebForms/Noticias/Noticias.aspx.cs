@@ -19,6 +19,28 @@ namespace TFGVeterinaria {
                 dtLecciones = new DataTable();
                 LoadLecciones();
             }
+
+
+            if (DELETE_FIELD.Value != "") {
+                int index = 0;
+                try {
+                    foreach (DataRow r in dtLecciones.Rows) {
+                        if (r["ID"].ToString() == DELETE_FIELD.Value) {
+                            break;
+                        }
+                        index++;
+                    }
+
+                    Noticias_Class.DesactivarNoticia(Convert.ToInt32(DELETE_FIELD.Value));
+
+                    dtLecciones.Rows.RemoveAt(index);
+                    gvLecciones.DataSource = dtLecciones;
+                    gvLecciones.DataBind();
+                } catch (Exception ex) {
+                    Libreria.addLog("Eliminando Noticia", ex.StackTrace, ex.Message);
+                }
+                DELETE_FIELD.Value = "";
+            }
         }
 
         protected void btnActualizar_Click(object sender, EventArgs e) {
@@ -44,13 +66,25 @@ namespace TFGVeterinaria {
 
 
         protected void gvLecciones_RowCommand(object sender, GridViewCommandEventArgs e) {
-            int index = Convert.ToInt32(e.CommandArgument); // El ID de la lección
+            int index = Convert.ToInt32(e.CommandArgument);
             if (e.CommandName == "Acceder") {
-                // Lógica para acceder a la lección
-                Response.Redirect("~/Leccion.aspx?id=" + index);
-            } else if (e.CommandName == "Añadir") {
-                // Lógica para añadir una nueva lección
+                Response.RedirectToRoute("noticiasDetalleRouteParam", new { ID = index });
+
+            } else if (e.CommandName == "AccederLeccion") {
+
                 Response.Redirect("~/AñadirLeccion.aspx");
+            }
+        }
+
+
+        protected void gvLecciones_RowDataBound(object sender, GridViewRowEventArgs e) {
+            if (e.Row.RowType == DataControlRowType.DataRow) {
+                Button btnDelete = (Button)e.Row.FindControl("btnDelete");
+                if (btnDelete != null) {
+                    // Usamos Eval para obtener el valor del ID y lo pasamos a OnClientClick
+                    string id = DataBinder.Eval(e.Row.DataItem, "ID").ToString();
+                    btnDelete.OnClientClick = $"return showDeleteConfirmation('{id}');";
+                }
             }
         }
     }

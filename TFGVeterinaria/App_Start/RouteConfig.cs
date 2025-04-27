@@ -14,6 +14,9 @@ namespace TFGVeterinaria
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
 
+            // Otros
+            RouteTable.Routes.MapPageRoute("ErrorPage", "Mascotas_Detalle/{ERROR}", "~/WebForms/ErrorPage.aspx");
+
             //Login
             RouteTable.Routes.MapPageRoute("loginRoute", "Login", "~/WebForms/Login/Login.aspx");
             RouteTable.Routes.MapPageRoute("registroRoute", "Registro", "~/WebForms/Login/Registro.aspx");
@@ -23,9 +26,9 @@ namespace TFGVeterinaria
             RouteTable.Routes.MapPageRoute("mascotasDetalleRoute", "Mascotas_Detalle", "~/WebForms/Mascotas/Mascotas_Detalle.aspx");
             RouteTable.Routes.MapPageRoute("mascotasDetalleRouteParam", "Mascotas_Detalle/{alta}", "~/WebForms/Mascotas/Mascotas_Detalle.aspx");
 
-
             //Noticias
             RouteTable.Routes.MapPageRoute("noticiasRoute", "Noticias", "~/WebForms/Noticias/Noticias.aspx");
+            RouteTable.Routes.MapPageRoute("noticiasDetalleRouteParam", "Noticias_Detalle/{ID}", "~/WebForms/Noticias/Noticias_Detalle.aspx");
         }
     }
 }

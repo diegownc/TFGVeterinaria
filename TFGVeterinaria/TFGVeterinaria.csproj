@@ -207,7 +207,9 @@
     <Content Include="WebForms\Login\Login.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas_Detalle.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas.aspx" />
+    <Content Include="WebForms\Noticias\Noticias_Detalle.aspx" />
     <Content Include="WebForms\Noticias\Noticias.aspx" />
+    <Content Include="WebForms\ErrorPage.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -321,12 +323,26 @@
     <Compile Include="WebForms\Mascotas\Mascotas.aspx.designer.cs">
       <DependentUpon>Mascotas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\Noticias\Noticias_Detalle.aspx.cs">
+      <DependentUpon>Noticias_Detalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Noticias\Noticias_Detalle.aspx.designer.cs">
+      <DependentUpon>Noticias_Detalle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\Noticias\Noticias.aspx.cs">
       <DependentUpon>Noticias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForms\Noticias\Noticias.aspx.designer.cs">
       <DependentUpon>Noticias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
