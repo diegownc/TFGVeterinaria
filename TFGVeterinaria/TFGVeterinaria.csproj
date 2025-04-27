@@ -205,6 +205,7 @@
     <Content Include="Documentacion\Mockups.drawio" />
     <Content Include="WebForms\Login\Registro.aspx" />
     <Content Include="WebForms\Login\Login.aspx" />
+    <Content Include="WebForms\Logs\LogSistema.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas_Detalle.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas.aspx" />
     <Content Include="WebForms\Noticias\Noticias_Detalle.aspx" />
@@ -309,6 +310,13 @@
     <Compile Include="WebForms\Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\Logs\LogSistema.aspx.cs">
+      <DependentUpon>LogSistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Logs\LogSistema.aspx.designer.cs">
+      <DependentUpon>LogSistema.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\Mascotas\Mascotas_Detalle.aspx.cs">
       <DependentUpon>Mascotas_Detalle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -350,6 +358,7 @@
     <Folder Include="WebForms\Chat\" />
     <Folder Include="WebForms\Comunidad\" />
     <Folder Include="WebForms\Servicios\" />
+    <Folder Include="WebForms\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -28,7 +28,7 @@ namespace TFGVeterinaria
                 } else if (pagina == "USUARIOS") {
                     setSelectedMenu("nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "navbar-brand", "nav-link");
                 } else if (pagina == "LOGS") {
-                    setSelectedMenu("nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "navbar-brand", "nav-link", "navbar-brand");
+                    setSelectedMenu("nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "navbar-brand");
                 } else {
                     setSelectedMenu("navbar-brand", "nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "nav-link", "nav-link");
                 }
