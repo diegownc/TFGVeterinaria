@@ -207,6 +207,7 @@
     <Content Include="WebForms\Login\Login.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas_Detalle.aspx" />
     <Content Include="WebForms\Mascotas\Mascotas.aspx" />
+    <Content Include="WebForms\Noticias\Noticias.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -251,6 +252,7 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Clases\Libreria.cs" />
+    <Compile Include="Clases\Noticias_Class.cs" />
     <Compile Include="Clases\Login_Class.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -319,12 +321,18 @@
     <Compile Include="WebForms\Mascotas\Mascotas.aspx.designer.cs">
       <DependentUpon>Mascotas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\Noticias\Noticias.aspx.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Noticias\Noticias.aspx.designer.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="WebForms\Chat\" />
     <Folder Include="WebForms\Comunidad\" />
-    <Folder Include="WebForms\Noticias\" />
     <Folder Include="WebForms\Servicios\" />
   </ItemGroup>
   <ItemGroup>

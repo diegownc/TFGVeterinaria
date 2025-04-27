@@ -56,6 +56,20 @@ CREATE TABLE LOG_PROCESOS(
     FECHA TIMESTAMP
 );
 
+
+CREATE TABLE NOTICIAS(
+	ID SERIAL PRIMARY KEY,
+    TITULO VARCHAR(200),
+    DESCRIPCION VARCHAR(500),
+    CONTENIDO TEXT,
+    AUTOR VARCHAR(500),
+    USUARIO VARCHAR(50),
+    FECHA TIMESTAMP,
+    ImagenURL VARCHAR(500)
+);
+
+ALTER TABLE NOTICIAS ADD CONSTRAINT NOTICIAS_USUARIOS_FK FOREIGN KEY (USUARIO) REFERENCES USUARIOS(USUARIO);
+
 -- ########################################################################################################################################
 -- INSERTS
 -- ########################################################################################################################################

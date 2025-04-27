@@ -22,6 +22,10 @@ namespace TFGVeterinaria
             RouteTable.Routes.MapPageRoute("mascotasRoute", "Mascotas", "~/WebForms/Mascotas/Mascotas.aspx");
             RouteTable.Routes.MapPageRoute("mascotasDetalleRoute", "Mascotas_Detalle", "~/WebForms/Mascotas/Mascotas_Detalle.aspx");
             RouteTable.Routes.MapPageRoute("mascotasDetalleRouteParam", "Mascotas_Detalle/{alta}", "~/WebForms/Mascotas/Mascotas_Detalle.aspx");
+
+
+            //Noticias
+            RouteTable.Routes.MapPageRoute("noticiasRoute", "Noticias", "~/WebForms/Noticias/Noticias.aspx");
         }
     }
 }
