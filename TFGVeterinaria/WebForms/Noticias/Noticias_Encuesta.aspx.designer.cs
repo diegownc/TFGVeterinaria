@@ -10,7 +10,7 @@
 namespace TFGVeterinaria {
 
 
-    public partial class Noticias_Detalle {
+    public partial class Noticias_Encuesta {
 
         /// <summary>
         /// Control alertaExito.
@@ -22,49 +22,13 @@ namespace TFGVeterinaria {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertaExito;
 
         /// <summary>
-        /// Control seleccionarArchivo.
+        /// Control alertaFail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl seleccionarArchivo;
-
-        /// <summary>
-        /// Control ImagenNoticia.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image ImagenNoticia;
-
-        /// <summary>
-        /// Control EditarBtn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EditarBtn;
-
-        /// <summary>
-        /// Control GuardarBtn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarBtn;
-
-        /// <summary>
-        /// Control btnVolver.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor btnVolver;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertaFail;
 
         /// <summary>
         /// Control ID_NOTICIA.
@@ -76,48 +40,93 @@ namespace TFGVeterinaria {
         protected global::System.Web.UI.WebControls.HiddenField ID_NOTICIA;
 
         /// <summary>
-        /// Control txtTitulo.
+        /// Control LISTAID.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitulo;
+        protected global::System.Web.UI.WebControls.HiddenField LISTAID;
 
         /// <summary>
-        /// Control txtDescripcion.
+        /// Control RESPUESTA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
+        protected global::System.Web.UI.WebControls.HiddenField RESPUESTA;
 
         /// <summary>
-        /// Control txtContenido.
+        /// Control txtPregunta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContenido;
+        protected global::System.Web.UI.WebControls.TextBox txtPregunta;
 
         /// <summary>
-        /// Control btnCrearPregunta.
+        /// Control txtTextoAdicional.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearPregunta;
+        protected global::System.Web.UI.WebControls.TextBox txtTextoAdicional;
 
         /// <summary>
-        /// Control GridPreguntas.
+        /// Control BT_A.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridPreguntas;
+        protected global::System.Web.UI.WebControls.Button BT_A;
+
+        /// <summary>
+        /// Control BT_B.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_B;
+
+        /// <summary>
+        /// Control BT_C.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_C;
+
+        /// <summary>
+        /// Control BT_D.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BT_D;
+
+        /// <summary>
+        /// Control BTSiguiente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BTSiguiente;
+
+        /// <summary>
+        /// Control BTSalir.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BTSalir;
     }
 }

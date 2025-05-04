@@ -71,8 +71,8 @@ namespace TFGVeterinaria {
                 Response.RedirectToRoute("noticiasDetalleRouteParam", new { ID = index });
 
             } else if (e.CommandName == "AccederLeccion") {
+                Response.RedirectToRoute("notencDetalleRouteParam", new { ID = index });
 
-                Response.Redirect("~/AñadirLeccion.aspx");
             }
         }
 
@@ -84,6 +84,10 @@ namespace TFGVeterinaria {
                     // Usamos Eval para obtener el valor del ID y lo pasamos a OnClientClick
                     string id = DataBinder.Eval(e.Row.DataItem, "ID").ToString();
                     btnDelete.OnClientClick = $"return showDeleteConfirmation('{id}');";
+                }
+                btnDelete.Visible = false;
+                if (Session["USR_PERFIL"] != null && (Session["USR_PERFIL"].ToString() == "VETERINARIO" || Session["USR_PERFIL"].ToString() == "ADMINISTRADOR")) {
+                    btnDelete.Visible = true;
                 }
             }
         }

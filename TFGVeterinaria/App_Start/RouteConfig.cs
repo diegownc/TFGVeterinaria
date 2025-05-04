@@ -29,6 +29,7 @@ namespace TFGVeterinaria
             //Noticias
             RouteTable.Routes.MapPageRoute("noticiasRoute", "Noticias", "~/WebForms/Noticias/Noticias.aspx");
             RouteTable.Routes.MapPageRoute("noticiasDetalleRouteParam", "Noticias_Detalle/{ID}", "~/WebForms/Noticias/Noticias_Detalle.aspx");
+            RouteTable.Routes.MapPageRoute("notencDetalleRouteParam", "Noticias_Encuesta/{ID}", "~/WebForms/Noticias/Noticias_Encuesta.aspx");
 
             //Logs
             RouteTable.Routes.MapPageRoute("LogsRoute", "Logs", "~/WebForms/Logs/LogSistema.aspx");

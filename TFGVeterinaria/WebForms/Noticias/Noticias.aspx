@@ -83,7 +83,7 @@
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button ID="btnAcceder" runat="server" Text="Detalle" CommandName="Acceder" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
-                            <asp:Button ID="btnAnadir" runat="server" Text="Acceder Lección" CommandName="AccederLeccion" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
+                            <asp:Button ID="btnAnadir"  Visible='<%# Convert.ToInt32(Eval("PREGUNTAS")) > 0 %>' runat="server" Text="Acceder Lección" CommandName="AccederLeccion" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
                             <asp:Button ID="btnDelete" runat="server" Text="Eliminar"  CommandName="Delete" CssClass="btn btn-danger btn-sm" OnClientClick="return showDeleteConfirmation(this);"/>
                         </ItemTemplate>
                     </asp:TemplateField>

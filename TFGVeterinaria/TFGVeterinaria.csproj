@@ -211,6 +211,7 @@
     <Content Include="WebForms\Noticias\Noticias_Detalle.aspx" />
     <Content Include="WebForms\Noticias\Noticias.aspx" />
     <Content Include="WebForms\ErrorPage.aspx" />
+    <Content Include="WebForms\Noticias\Noticias_Encuesta.aspx" />
     <Content Include="WebForms\Usuarios\Usuarios.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -353,6 +354,13 @@
     </Compile>
     <Compile Include="WebForms\ErrorPage.aspx.designer.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Noticias\Noticias_Encuesta.aspx.cs">
+      <DependentUpon>Noticias_Encuesta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Noticias\Noticias_Encuesta.aspx.designer.cs">
+      <DependentUpon>Noticias_Encuesta.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Usuarios\Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
