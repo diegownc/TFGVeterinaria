@@ -36,9 +36,33 @@
     function CancelConfirmation() {
         $('#confirmDeleteModal').modal('hide');  // Ocultamos el modal
     }
+
+    function abrirModal(btn) {
+        var id = $(btn).data("id");
+        if (!id) return;
+
+        $('#iframeModal').attr('src', '/Noticias_Encuesta/' + id);
+        var modal = new bootstrap.Modal(document.getElementById('modalEncuesta'));
+        modal.show();
+    }
     </script>
 <div class="container">
         <asp:HiddenField ID="DELETE_FIELD" runat="server" Value="" />
+        
+   <div class="modal fade" id="modalEncuesta" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-dark text-white">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Encuesta</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body p-0">
+            <iframe src="" id="iframeModal" width="100%" height="600px" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
         <!-- Modal de confirmación de eliminación -->
         <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
@@ -83,8 +107,11 @@
                     <asp:TemplateField>
                         <ItemTemplate>
                             <asp:Button ID="btnAcceder" runat="server" Text="Detalle" CommandName="Acceder" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
-                            <asp:Button ID="btnAnadir"  Visible='<%# Convert.ToInt32(Eval("PREGUNTAS")) > 0 %>' runat="server" Text="Acceder Lección" CommandName="AccederLeccion" CommandArgument='<%# Eval("ID") %>' CssClass="btn btn-primary btn-sm"/>
                             <asp:Button ID="btnDelete" runat="server" Text="Eliminar"  CommandName="Delete" CssClass="btn btn-danger btn-sm" OnClientClick="return showDeleteConfirmation(this);"/>
+                            <asp:Button ID="btnAbrirModal" runat="server" Text="Ver Lección"
+                                CssClass="btn btn-info mt-2"
+                                OnClientClick="abrirModal(this); return false;"
+                                data-id='<%# Eval("ID") %>' Visible='<%# Convert.ToInt32(Eval("PREGUNTAS")) > 0 %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>

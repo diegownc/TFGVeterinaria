@@ -166,8 +166,5 @@ namespace TFGVeterinaria {
             setPregunta();
         }
 
-        protected void BTSalir_Click(object sender, EventArgs e) {
-            Response.RedirectToRoute("noticiasRoute");
-        }
     }
 }

@@ -70,10 +70,7 @@ namespace TFGVeterinaria {
             if (e.CommandName == "Acceder") {
                 Response.RedirectToRoute("noticiasDetalleRouteParam", new { ID = index });
 
-            } else if (e.CommandName == "AccederLeccion") {
-                Response.RedirectToRoute("notencDetalleRouteParam", new { ID = index });
-
-            }
+            } 
         }
 
 
