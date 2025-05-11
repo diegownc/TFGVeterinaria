@@ -37,6 +37,7 @@ namespace TFGVeterinaria
                             Session["USR_EMAIL"] = email;
                             Session["USR_VERIFICADO"] = verificado;
                             Session["PAGE"] = "SERVICIOS";
+                            Response.RedirectToRoute("ServiciosRoute");
                         } else {
                             lblMessage.Attributes["class"] = "error-message";
                             lblMessage.InnerText = "La contraseña no es correcta";

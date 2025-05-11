@@ -78,5 +78,15 @@ namespace TFGVeterinaria
             UsuariosMenu.Visible = UsuariosVisible;
             LogsMenu.Visible = LogsVisible;
         }
+
+        protected void SalirBtn_Click(object sender, EventArgs e) {
+            Session["USR_USUARIO"] = null;
+            Session["USR_NOMBRE"] = null;
+            Session["USR_PERFIL"] = null;
+            Session["USR_EMAIL"] = null;
+            Session["USR_VERIFICADO"] = null;
+            Session["PAGE"] = "SERVICIOS";
+            Response.RedirectToRoute("ServiciosRoute");
+        }
     }
 }

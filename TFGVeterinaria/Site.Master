@@ -72,7 +72,7 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a class="nav-link btn" id="LoginBtn" runat="server" href="~/Login">Entrar / Regístrate</a>
-                            <a class="nav-link btn" id="SalirBtn" runat="server" href="~/Salir">Salir</a>
+                            <asp:Button runat="server" ID="SalirBtn" Text="Salir" CssClass="nav-link btn" OnClick="SalirBtn_Click"/>
                         </li>
                     </ul>
                 </div>

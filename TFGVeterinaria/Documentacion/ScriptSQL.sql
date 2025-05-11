@@ -139,6 +139,20 @@ CREATE TABLE NOTICIA_PREGUNTAS(
 
 ALTER TABLE NOTICIA_PREGUNTAS ADD CONSTRAINT NOTICIA_PREGUNTAS_NOTICIAS_FK FOREIGN KEY (IDNOTICIA) REFERENCES NOTICIAS(ID);
 
+
+CREATE TABLE SERVICIOS(
+	ID SERIAL PRIMARY KEY,
+	USUARIO VARCHAR(50),
+	UBICACION VARCHAR(100),
+	PRECIO FLOAT,
+	DESCRIPCION VARCHAR(500),
+	IMAGEURL VARCHAR(500)
+);
+
+ALTER TABLE SERVICIOS ADD CONSTRAINT SERVICIOS_USUARIOS_FK FOREIGN KEY (USUARIO) REFERENCES USUARIOS(USUARIO);
+
+
+
 -- ########################################################################################################################################
 -- INSERTS
 -- ########################################################################################################################################
