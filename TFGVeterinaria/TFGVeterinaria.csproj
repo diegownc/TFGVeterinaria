@@ -213,6 +213,8 @@
     <Content Include="WebForms\ErrorPage.aspx" />
     <Content Include="WebForms\Noticias\Noticias_Encuesta.aspx" />
     <Content Include="WebForms\Servicios\Servicios.aspx" />
+    <Content Include="WebForms\Servicios\ServiciosEditar.aspx" />
+    <Content Include="WebForms\Servicios\ServiciosCita.aspx" />
     <Content Include="WebForms\Usuarios\Usuarios.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -370,6 +372,20 @@
     </Compile>
     <Compile Include="WebForms\Servicios\Servicios.aspx.designer.cs">
       <DependentUpon>Servicios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Servicios\ServiciosEditar.aspx.cs">
+      <DependentUpon>ServiciosEditar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Servicios\ServiciosEditar.aspx.designer.cs">
+      <DependentUpon>ServiciosEditar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Servicios\ServiciosCita.aspx.cs">
+      <DependentUpon>ServiciosCita.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Servicios\ServiciosCita.aspx.designer.cs">
+      <DependentUpon>ServiciosCita.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Usuarios\Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>

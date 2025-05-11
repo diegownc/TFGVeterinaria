@@ -87,7 +87,7 @@
                      <asp:TemplateField HeaderText="Imagen">
                         <ItemTemplate>
                             <!-- Usar el control Image y enlazar la URL -->
-                            <asp:Image ID="imgProducto" runat="server" 
+                            <asp:Image ID="imgUrl" runat="server" 
                                 ImageUrl='<%# Eval("ImageUrl") %>' 
                                 CssClass="img-fluid" 
                                 Width="100" style="height: auto;" />
