@@ -2,6 +2,7 @@
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -37,7 +38,7 @@ namespace TFGVeterinaria {
                 txtTitulo.Text = titulo;
                 txtDescripcion.Text = descripcion;
                 txtUbicacion.Text = ubicacion;
-                txtPrecio.Text = precio.ToString();
+                txtPrecio.Text = precio.ToString("F2", CultureInfo.InvariantCulture);
                 ImagenServicio.ImageUrl = imageUrl;
             } catch (Exception ex) {
                 Libreria.addLog("setDatos", ex.StackTrace, ex.Message);

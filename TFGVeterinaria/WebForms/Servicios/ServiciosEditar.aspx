@@ -94,7 +94,7 @@
                 </Scripts>
             </asp:ScriptManager>
             <div class="container">
-                <asp:Image ID="ImagenServicio" runat="server" CssClass="img-thumbnail" AlternateText="Servicio" Width="300" />
+                <asp:Image ID="ImagenServicio" runat="server" CssClass="img-thumbnail" AlternateText="Servicio" Width="300" Height="200" />
 
                 <!-- Formulario -->
                 <div class="row justify-content-center align-items-center" style="height: 100%; width:100%;">
