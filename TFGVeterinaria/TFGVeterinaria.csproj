@@ -203,6 +203,8 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Documentacion\Mockups.drawio" />
+    <Content Include="WebForms\Chat\Chat.aspx" />
+    <Content Include="WebForms\Comunidad\Comunidad.aspx" />
     <Content Include="WebForms\Login\Registro.aspx" />
     <Content Include="WebForms\Login\Login.aspx" />
     <Content Include="WebForms\Logs\LogSistema.aspx" />
@@ -260,6 +262,9 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Clases\Servicios_Class.cs" />
+    <Compile Include="Clases\Chat_Class.cs" />
+    <Compile Include="Clases\Comunidad_Class.cs" />
+    <Compile Include="Clases\Mascotas_Class.cs" />
     <Compile Include="Clases\Usuarios_Class.cs" />
     <Compile Include="Clases\Libreria.cs" />
     <Compile Include="Clases\Noticias_Class.cs" />
@@ -302,6 +307,20 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Chat\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Chat\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Comunidad\Comunidad.aspx.cs">
+      <DependentUpon>Comunidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Comunidad\Comunidad.aspx.designer.cs">
+      <DependentUpon>Comunidad.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Login\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
@@ -397,8 +416,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="WebForms\Chat\" />
-    <Folder Include="WebForms\Comunidad\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
