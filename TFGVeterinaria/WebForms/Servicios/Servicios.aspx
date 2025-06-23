@@ -117,20 +117,9 @@
                                 <strong>Precio:</strong> <%# Eval("PRECIO", "{0:C}") %> <br />
                                 <strong>Descripción: </strong> <%# Eval("DESCRIPCION") %> <br />
                             </p>
-                            <asp:Button ID="btnAbrirModal" runat="server" Text="Solicitar Cita"
-                                CssClass="btn btn-sm btn-secondary w-100"
-                                OnClientClick="abrirModal(this); return false;"
-                                data-id='<%# Eval("ID") %>' />
-
-                            <asp:Button ID="btnEdit" runat="server" Text="Editar"
-                                CssClass="btn btn-sm btn-warning w-100 mt-1"
-                                OnClientClick="abrirModalEditar(this); return false;"
-                                data-id='<%# Eval("ID") %>' />
-
-                            <asp:Button ID="btnDelete" runat="server" Text="Eliminar"  
-                                CssClass="btn btn-danger btn-sm w-100 mt-1"
-                                CommandName="Delete" 
-                                OnClientClick="return showDeleteConfirmation(this);" />
+                            <asp:Button ID="btnAbrirModal" runat="server" Text="Solicitar Cita" CssClass="btn btn-sm btn-secondary w-100" OnClientClick="abrirModal(this); return false;" data-id='<%# Eval("ID") %>' />
+                            <asp:Button ID="btnEdit" runat="server" Text="Editar" CssClass="btn btn-sm btn-warning w-100 mt-1" OnClientClick="abrirModalEditar(this); return false;" data-id='<%# Eval("ID") %>' />
+                            <asp:Button ID="btnDelete" runat="server" Text="Eliminar" CssClass="btn btn-danger btn-sm w-100 mt-1" CommandName="Delete" OnClientClick="return showDeleteConfirmation(this);" />
                         </div>
                     </div>
                 </div>

@@ -42,6 +42,11 @@ namespace TFGVeterinaria
             RouteTable.Routes.MapPageRoute("ServCitaRoute", "ServiciosCita/{ID}", "~/WebForms/Servicios/ServiciosCita.aspx");
             RouteTable.Routes.MapPageRoute("ServEdRoute", "ServiciosEditar/{ID}", "~/WebForms/Servicios/ServiciosEditar.aspx");
 
+            //Chat
+            RouteTable.Routes.MapPageRoute("ChatRoute", "Chat", "~/WebForms/Chat/Chat.aspx");
+
+            //Comunidad
+            RouteTable.Routes.MapPageRoute("ComunidadRoute", "Comunidad", "~/WebForms/Comunidad/Comunidad.aspx");
 
         }
     }
