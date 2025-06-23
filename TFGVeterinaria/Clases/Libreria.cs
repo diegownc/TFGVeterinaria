@@ -28,7 +28,6 @@ namespace TFGVeterinaria.Clases {
                     }
                 }
             } catch (Exception ex) {
-                //TODO
                 Console.WriteLine(ex.ToString());
             }
         }
