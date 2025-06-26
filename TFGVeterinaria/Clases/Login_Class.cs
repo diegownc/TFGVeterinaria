@@ -116,19 +116,7 @@ namespace TFGVeterinaria.Clases
 
             return ok;
         }
-        // Método para encriptar la contraseña con PBKDF2
-        public static string HashPassword(string password, string salt)
-        {
-            string res = string.Empty;
-            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt)))
-            {
-                // Generar el hash con PBKDF2
-                byte[] hashBytes = PBKDF2(password, salt, 10000, 32); // 10000 es el número de iteraciones
-                res = Convert.ToBase64String(hashBytes); // Devuelve el hash en formato base64
-            }
-
-            return res;
-        }
+       
         private static byte[] PBKDF2(string password, string salt, int iterations, int length)
         {
             using (var pbkdf2 = new Rfc2898DeriveBytes(password, Encoding.UTF8.GetBytes(salt), iterations))
@@ -137,13 +125,25 @@ namespace TFGVeterinaria.Clases
             }
         }
 
-        // Generar un salt aleatorio para cada usuario 
+        // PBKDF2
+        public static string HashPassword(string password, string salt) {
+            string res = string.Empty;
+            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt))) {
+                // Generar el hash con PBKDF2
+                byte[] hashBytes = PBKDF2(password, salt, 10000, 32); // 10000 es el número de iteraciones
+                res = Convert.ToBase64String(hashBytes); // Devuelve el hash en formato base64
+            }
+
+            return res;
+        }
+
+        // SALT
         public static string GenerateSalt()
         {
             string res = string.Empty;
             using (var rng = new RNGCryptoServiceProvider())
             {
-                byte[] saltBytes = new byte[16]; // Un tamaño de salt común es de 16 bytes
+                byte[] saltBytes = new byte[16]; 
                 rng.GetBytes(saltBytes);
                 res = Convert.ToBase64String(saltBytes);
             }

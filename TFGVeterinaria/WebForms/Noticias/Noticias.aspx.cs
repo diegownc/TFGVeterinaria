@@ -18,6 +18,10 @@ namespace TFGVeterinaria {
             if (!IsPostBack) {
                 dtLecciones = new DataTable();
                 LoadLecciones();
+                btnActualizar.Visible = false;
+                if (Session["USR_PERFIL"] != null && (Session["USR_PERFIL"].ToString() == "VETERINARIO" || Session["USR_PERFIL"].ToString() == "ADMINISTRADOR")) {
+                    btnActualizar.Visible = true;
+                }
             }
 
 
