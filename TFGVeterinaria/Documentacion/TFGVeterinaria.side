@@ -1,0 +1,133 @@
+{
+  "id": "9f781b34-0f42-4083-a990-a27c4519a1f3",
+  "version": "2.0",
+  "name": "TFGVeterinaria",
+  "url": "Comprueba Login ",
+  "tests": [{
+    "id": "8710f4f4-5680-483c-9333-13577597d619",
+    "name": "TFGVeterinaria",
+    "commands": []
+  }, {
+    "id": "3c4959b0-2a22-4285-bc9f-e171f569e90b",
+    "name": "Test Login",
+    "commands": [{
+      "id": "470f4a23-d79b-4676-912f-f08bad10d479",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:44372",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "337d09f6-4ba5-49a8-a37c-7dce13aa185a",
+      "comment": "",
+      "command": "click",
+      "target": "id=LoginBtn",
+      "targets": [
+        ["id=LoginBtn", "id"],
+        ["linkText=Entrar / Regístrate", "linkText"],
+        ["css=#LoginBtn", "css:finder"],
+        ["xpath=//a[contains(text(),'Entrar / Regístrate')]", "xpath:link"],
+        ["xpath=//a[@id='LoginBtn']", "xpath:attributes"],
+        ["xpath=//form[@id='ctl01']/nav/div/div/ul[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'Login')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Entrar / Regístrate')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db701ffd-cc28-4f62-998c-ae5736820f81",
+      "comment": "",
+      "command": "click",
+      "target": "id=MainContent_txtUserName",
+      "targets": [
+        ["id=MainContent_txtUserName", "id"],
+        ["name=ctl00$MainContent$txtUserName", "name"],
+        ["css=#MainContent_txtUserName", "css:finder"],
+        ["xpath=//input[@id='MainContent_txtUserName']", "xpath:attributes"],
+        ["xpath=//form[@id='ctl01']/div[3]/div/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f79b49dc-72fd-413e-b8cb-00103823fdea",
+      "comment": "",
+      "command": "type",
+      "target": "id=MainContent_txtUserName",
+      "targets": [],
+      "value": "Diego"
+    }, {
+      "id": "75333a61-c9b1-47de-972c-e6163feec53f",
+      "comment": "",
+      "command": "click",
+      "target": "id=MainContent_txtPassword",
+      "targets": [
+        ["id=MainContent_txtPassword", "id"],
+        ["name=ctl00$MainContent$txtPassword", "name"],
+        ["css=#MainContent_txtPassword", "css:finder"],
+        ["xpath=//input[@id='MainContent_txtPassword']", "xpath:attributes"],
+        ["xpath=//form[@id='ctl01']/div[3]/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4eaef8a-cd21-4782-80c5-7acc0f65d4c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=MainContent_txtPassword",
+      "targets": [
+        ["id=MainContent_txtPassword", "id"],
+        ["name=ctl00$MainContent$txtPassword", "name"],
+        ["css=#MainContent_txtPassword", "css:finder"],
+        ["xpath=//input[@id='MainContent_txtPassword']", "xpath:attributes"],
+        ["xpath=//form[@id='ctl01']/div[3]/div/div/div/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Diego12345@"
+    }, {
+      "id": "bd5b68ac-0fa2-48e2-beea-000f72bae817",
+      "comment": "",
+      "command": "click",
+      "target": "id=MainContent_btnLogin",
+      "targets": [
+        ["id=MainContent_btnLogin", "id"],
+        ["css=#MainContent_btnLogin", "css:finder"],
+        ["xpath=//button[@id='MainContent_btnLogin']", "xpath:attributes"],
+        ["xpath=//form[@id='ctl01']/div[3]/div/div/div/div/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "373ab084-ccfc-4504-bc09-9070ec2a186a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href.endsWith(\"Servicios\");",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "b8b95f99-e5fb-45ed-8e1e-5cabd18eff2f",
+      "comment": "",
+      "command": "echo",
+      "target": "${result}",
+      "targets": [],
+      "value": "console"
+    }, {
+      "id": "2e492acf-6013-4119-997b-a03720ff8437",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }],
+  "suites": [{
+    "id": "c1ece10d-e4fe-421b-b182-897dac0078ff",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["8710f4f4-5680-483c-9333-13577597d619"]
+  }],
+  "urls": ["https://localhost:44372/Servicios", "https://localhost:44372/"],
+  "plugins": []
+}
