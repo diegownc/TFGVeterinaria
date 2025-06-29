@@ -172,6 +172,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Imagenes\Gato1.jpg" />
+    <Content Include="Imagenes\iconpersona.png" />
     <Content Include="Imagenes\Perro1.jpg" />
     <Content Include="Imagenes\Perro2.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />

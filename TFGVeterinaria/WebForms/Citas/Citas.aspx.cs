@@ -18,7 +18,15 @@ namespace TFGVeterinaria {
             if (!IsPostBack) {
                 dtCitas = new DataTable();
                 LoadCitas();
-                
+
+                if (Session["USR_PERFIL"] != null) {
+                    string perfil = Session["USR_PERFIL"].ToString();
+                    if (perfil == "GENERICO") {
+                        Response.RedirectToRoute("ErrorPage", new { ERROR = "Se ha intentado acceder a una ZONA que solo es accesible por un Veterinario" });
+                    }
+                } else {
+                    Response.RedirectToRoute("ErrorPage", new { ERROR = "Se ha intentado acceder a una ZONA que solo es accesible por un Veterinario" });
+                }
             }
         }
 

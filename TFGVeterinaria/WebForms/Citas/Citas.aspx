@@ -22,8 +22,8 @@
                     <ItemTemplate>
                         <asp:Button ID="btnConfirmar" runat="server" Text="Confirmar" Visible='<%# Convert.ToInt32(Eval("ESTADO")) == 0 %>' CommandName="Confirmar" CssClass="btn btn-success btn-sm w-100" CommandArgument='<%# Eval("ID") %>' />
                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar"  Visible='<%# Convert.ToInt32(Eval("ESTADO")) == 0 %>'  CommandName="Cancelar" CssClass="btn btn-danger btn-sm w-100" CommandArgument='<%# Eval("ID") %>' />
-                        <asp:TextBox Text="CONFIRMADO" runat="server" Visible='<%# Convert.ToInt32(Eval("ESTADO")) == 1 %>' CssClass="bg-success msgpersonalizado" > </asp:TextBox>
-                        <asp:TextBox Text="CANCELADO" runat="server" Visible='<%# Convert.ToInt32(Eval("ESTADO")) == 2 %>' CssClass="bg-danger msgpersonalizado" > </asp:TextBox>
+                        <asp:TextBox Text="CONFIRMADO"  ReadOnly="true" runat="server" Visible='<%# Convert.ToInt32(Eval("ESTADO")) == 1 %>' CssClass="bg-success msgpersonalizado" > </asp:TextBox>
+                        <asp:TextBox Text="CANCELADO" ReadOnly="true" runat="server" Visible='<%# Convert.ToInt32(Eval("ESTADO")) == 2 %>' CssClass="bg-danger msgpersonalizado" > </asp:TextBox>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="FECHA" ItemStyle-ForeColor="White" HeaderText="Fecha" />
